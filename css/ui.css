@@ -1,0 +1,120 @@
+/*
+* General styles
+*/
+
+* {
+	transition: all 0.4s ease;
+}
+
+body > .container {
+	margin-top: 50px;
+}
+
+.el-col, .svg-col {
+	margin: 0;
+	padding: 0;
+}
+
+.svg-col {
+	height: 100%;
+}
+
+#circuitWrapper {
+	height: 500px;
+}
+
+.component {
+	height: 100%;
+}
+
+path.one {
+	stroke: #83E05C;
+}
+
+path.zero {
+	stroke: #F55F5F;
+}
+
+/*
+* Input
+*/
+.input {
+	height: 200px;
+}
+
+.input:first-of-type {
+	margin-bottom: 100px;
+}
+
+.data {
+	position: relative;
+
+	text-align: center;
+	font-size: 250%;
+	font-family: monospace;
+}
+
+.toggle:hover {
+	cursor: pointer;
+}
+
+.input .data {
+	top: 25px;
+}
+
+/*
+* Gate
+*/
+.gate {
+	margin-top: 125px;
+	height: 250px;
+	position: relative;
+}
+
+.gate .data {
+	height: 60px;
+	width: 60px;
+
+	font-size: 200%;
+}
+
+.gate .data.well:nth-of-type(1), .gate .data.well:nth-of-type(2) {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.gate .data.well:nth-of-type(3) {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.gate .data:nth-of-type(1), .gate .data:nth-of-type(2) {
+	top: 20px;
+	left: -16px;
+}
+
+.gate .data:nth-of-type(3) {
+	top: -105px;
+	left: 314px;
+}
+
+.gate-img {
+	text-align: center;
+	position: absolute;
+	top: 90px;
+	width: 100%;
+	margin-left: -15px;
+	cursor: pointer;
+}
+
+/*
+* Output
+*/
+.output {
+	height: 200px;
+	margin-top: 150px;
+}
+
+.output .data {
+	top: 25px;
+}

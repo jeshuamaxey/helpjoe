@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Lessons in Logic Gates</title>
+	<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/ui.css" rel="stylesheet">
+</head>
+<body>
+	<!-- main content -->
+	<div class="container">
+		<div class="row">
+			<div class="well">
+				<h1>Everday <span class="logic">Logic</span></h1>
+				<button class="btn btn-success pull-right next-lesson">Next Lesson</button>
+				<p id="description"></p>
+			</div>
+		</div>
+		<div id="circuitWrapper" class="row">
+  		<div id="inputs" class="el-col col-md-3">
+  			<div id="inputOne" class="component input panel panel-default panel-danger">
+  				<div class="panel-heading"></div>
+  				<div class="panel-body">
+  					<div class="data toggle well well-sm" data-path-class="first" data-mirror-index="1">0</div>
+  				</div>
+  			</div>
+				<div id="inputTwo" class="component input panel panel-default panel-danger">
+					<div class="panel-heading"></div>
+					<div class="panel-body">
+						<!-- <p></p> -->
+	  				<div class="data toggle well well-sm" data-path-class="second" data-mirror-index="2">0</div>
+					</div>
+  			</div>
+  		</div>
+	  	<div id="inputsToGate" class="svg-col col-md-1">
+	  		<svg data-type="two-to-one"></svg>
+	  	</div>
+	  	<div id="gate" class="el-col col-md-4" data-gate-index="0">
+	  		<div class="component gate panel panel-default">
+	  			<div class="panel-heading">Click the gate to cycle through options</div>
+	  			<div class="panel-body">
+	  				<div class="data well well-sm">0</div>
+		  			<div class="data well well-sm">0</div>
+		  			<div class="data well well-sm">0</div>
+		  			<div class="gate-img">
+		  				<img src="/gates/and.svg" width="200" height="100">
+		  				<div class="gate-name">and</div>
+		  			</div>
+	  			</div>
+	  		</div>
+	  	</div>
+	  	<div id="gateToOutput" class="svg-col col-md-1">
+	  		<svg data-type="one-to-one"></svg>
+	  	</div>
+	  	<div id="output" class="el-col col-md-3">
+	  		<div class="component output panel panel-default panel-danger">
+	  			<div class="panel-heading"></div>
+	  			<div class="panel-body">
+	  				<div class="data well well-sm">0</div>
+	  			</div>
+	  		</div>
+	  	</div>
+		</div>
+	</div>
+	<!-- javascript -->
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="js/lines.js"></script>
+	<script src="js/logic.js"></script>
+	<script src="js/ui.js"></script>
+</body>
+</html>

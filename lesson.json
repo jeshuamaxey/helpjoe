@@ -1,0 +1,23 @@
+[
+	{
+		"name": "Going on Holiday",
+		"description": "Joe is really stupid and can't figure out whether he's ready to go on holiday. Can you choose the right logic gate to help him.",
+		"gate": "and",
+		"inputs" : ["Have you booked your ticket?", "Have you packed your bag?"],
+		"output" : "Is Joe ready to go on holiday?"
+	},
+	{
+		"name": "Picnic",
+		"description": "Joe is in a bind (again!). He's wanted to go on a picnic for ages but it's never really been suitable. He's stuck at work Monday to Friday and only wants to go outside if it's sunny. Can you suggest a suitable logic gate to help him decide?",
+		"gate": "and",
+		"inputs" : ["Is it the weekend?", "Is it sunny outside?"],
+		"output" : "Can Joe finally go on his picnic?"
+	},
+	{
+		"name": "Pirate Joe",
+		"description": "Following an ill advised career change Joe is now the captain of a pirate ship. He really wants to go for a swim and is looking for any reason to jump in the cool blue water. Help him choose a suitable logic gate.",
+		"gate": "or",
+		"inputs" : ["Is the boat sinking?", "Is there a mutiny?"],
+		"output" : "Should Joe jump overboard?"
+	}
+]
