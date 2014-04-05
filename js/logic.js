@@ -6,16 +6,18 @@
   });
 }(window.jQuery));
 
+var nth = ['First', 'Second', 'Third', 'Fourth', 'Fifth'];
+
 function getHTMLTable(structure) {
   var results = getTable(structure),
-    html = '<table><thead><tr>',
+    html = '<table class="table"><thead><tr>',
     i, j, l, m;
 
   for (i = 0, l = countInputs(structure); i < l; i++) {
-    html += '<td>' + i + '</td>';
+    html += '<td>' + nth[i] + '</td>';
   }
 
-  html += '<td>output</td></tr></thead>';
+  html += '<td>Output</td></tr></thead>';
 
   for (i = 0, l = results.length; i < l; i++) {
     html += '<tr>';

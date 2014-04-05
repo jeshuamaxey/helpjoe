@@ -18,7 +18,7 @@ var gateList = ['and', 'nand', 'nor', 'or', 'xnor', 'xor'];
 ui.go = function() {
 	//load in lesson
 	$.getJSON('lesson.json', function(lessons) {
-		var i = Math.floor(Math.random()*lessons.length);
+		var i = 0;
 		var lesson = lessons[i];
 		ui.startLesson(lesson);
 		ui.lessons = lessons;
@@ -31,6 +31,7 @@ ui.go = function() {
 	$('.toggle').on('dblclick', function(e){e.preventDefault(); console.log('dclk')});
 	$('.gate-img').on('click', ui.nextGate);
 	$('.next-lesson').on('click', ui.nextLesson);
+	$('.check').on('click', ui.check);
 }
 
 ui.nextLesson = function () {
@@ -39,6 +40,7 @@ ui.nextLesson = function () {
 }
 
 ui.startLesson = function (lesson) {
+	ui.lesson = lesson;
 	$('#description').html(lesson.description);
 	$('#inputOne .panel-heading').html(lesson.inputs[0]);
 	$('#inputTwo .panel-heading').html(lesson.inputs[1]);
@@ -60,6 +62,33 @@ ui.initCircuit = function() {
 		el.classList.add('zero');
 	});
 };
+
+ui.check = function () {
+	$('.modal').modal('show');
+
+	var actualTable = getHTMLTable(circuit);
+	var tmp = circuit.gate;
+  circuit.gate = ui.lesson.gate;
+  var aimTable = getHTMLTable(circuit);
+  circuit.gate = tmp;
+
+  $('.aim-table').html(aimTable);
+  $('.actual-table').html(actualTable);
+
+  $('.gate-desc').text('The truth table for "' + circuit.gate + '" is:');
+
+	if (ui.lesson.gate === circuit.gate) {
+		$('.check-title').text('Success!');
+		$('.next-lesson').show();
+		$('.check-success').show();
+		$('.check-fail').hide();
+	} else {
+		$('.check-title').text('Oh no!');
+		$('.next-lesson').hide();
+		$('.check-success').hide();
+		$('.check-fail').show();
+	}
+}
 
 ui.nextGate = function () {
 	var currentGateIndex = parseInt($('#gate[data-gate-index]').attr('data-gate-index')),

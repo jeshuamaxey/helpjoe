@@ -10,6 +10,18 @@ body > .container {
 	margin-top: 50px;
 }
 
+table {
+	text-align: center;
+}
+
+thead {
+	font-weight: bold;
+}
+
+td:last-child {
+	border-left: 2px solid #ddd;
+}
+
 .el-col, .svg-col {
 	margin: 0;
 	padding: 0;
@@ -21,6 +33,10 @@ body > .container {
 
 #circuitWrapper {
 	height: 500px;
+}
+
+.logic {
+	font-family: cursive;
 }
 
 .component {

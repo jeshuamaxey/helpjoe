@@ -11,9 +11,13 @@
 	<div class="container">
 		<div class="row">
 			<div class="well">
-				<h1>Everday <span class="logic">Logic</span></h1>
-				<button class="btn btn-success pull-right next-lesson">Next Lesson</button>
-				<p id="description"></p>
+				<h1>Everyday <span class="logic">Logic</span></h1>
+				<div class="row">
+					<p id="description" class="col-sm-8"></p>
+					<div class="col-sm-2 col-sm-offset-2">
+						<button class="btn btn-success btn-lg btn-block pull-right check">Check</button>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div id="circuitWrapper" class="row">
@@ -43,7 +47,7 @@
 		  			<div class="data well well-sm">0</div>
 		  			<div class="data well well-sm">0</div>
 		  			<div class="gate-img">
-		  				<img src="/gates/and.svg" width="200" height="100">
+		  				<img src="gates/and.svg" width="200" height="100">
 		  				<div class="gate-name">and</div>
 		  			</div>
 	  			</div>
@@ -61,7 +65,51 @@
 	  		</div>
 	  	</div>
 		</div>
+
+	<footer class="row" style="margin-top: 50px">
+		<div class="well">
+			Made by <a href="http://twitter.com/jeshuamaxey">Jeshua Maxey</a> &amp; <a href="http://twitter.com/somehats">Joe Dytrych</a> for <a href="http://www.readysaltedcode.org/">Ready Salted Code</a>.
+		</div>
+	</footer>
 	</div>
+
+
+
+	<!-- results modal -->
+	<div class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title check-title">Modal</h4>
+				</div>
+				<div class="modal-body">
+					<div class="row check-fail">
+						<div class="col-sm-6">
+							<h5 class="gate-desc">You got:</h5>
+							<div class="actual-table"></div>
+						</div>
+						<div class="col-sm-6">
+							<h5>But Joe needs:</h5>
+							<div class="aim-table"></div>
+						</div>
+					</div>
+
+					<div class="row check-success">
+						<div class="col-sm-12">
+							<h5 class="gate-desc">You got:</h5>
+							<div class="actual-table"></div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary next-lesson" data-dismiss="modal">Next Lesson</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<!-- javascript -->
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>

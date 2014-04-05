@@ -1,7 +1,7 @@
 [
 	{
 		"name": "Going on Holiday",
-		"description": "Joe is really stupid and can't figure out whether he's ready to go on holiday. Can you choose the right logic gate to help him.",
+		"description": "Joe is really stupid and can't figure out whether he's ready to go on holiday. Joe can only go on holiday if he's booked his ticket and packed his bag. Can you choose the right logic gate to help him?",
 		"gate": "and",
 		"inputs" : ["Have you booked your ticket?", "Have you packed your bag?"],
 		"output" : "Is Joe ready to go on holiday?"
@@ -19,5 +19,26 @@
 		"gate": "or",
 		"inputs" : ["Is the boat sinking?", "Is there a mutiny?"],
 		"output" : "Should Joe jump overboard?"
+	},
+	{
+		"name": "Dedicated Follower of Fashion",
+		"description": "It's the night of the school dance and Joe needs to choose and outfit. Unfortunately Joe has terrible fashion sense. His wardrobe is full of stripy trousers and flowery shirts. On their own they don't look too bad, but worn together they look terrible. Help Joe by choosing a logic gate that'll ensure Joe doesn't embarrass himself at the dance.",
+		"gate": "nand",
+		"inputs" : ["Joe wears a pink flowery shirt", "Joe wears ludicrous stripy trousers"],
+		"output" : "Will Joe make a fool of himself at the dance?"
+	},
+	{
+		"name": "Show and Tell",
+		"description": "It's show and tell day. Joe has two pets at home, a T-Rex and a crocodile, but only one cage in which to transport them. If Joe brings both of them on the school bus, they'll fight in the cage and kill each other before Joe gets to school. If he brings just one, it will sit quietly and behave. Choose a logic gate so Joe can work out how to keep his pets alive.",
+		"gate": "xor",
+		"inputs" : ["Bring the T-Rex to show and tell", "Bring the crocodile to show and tell"],
+		"output" : "Will Joe's pets be alive at the end of the day?"
+	},
+	{
+		"name": "Sports Day",
+		"description": "It's sports day, and Joe has to decide which events to compete in. The only two remaining events to compete in are beach volleyball, or rhythmic gymnastics. Unfortunately for Joe, he's terrible at both of these, and is sure to come last if he chooses to compete in either event. Choose a logic gate that will help Joe to retain his dignity after sports day.",
+		"gate": "nor",
+		"inputs": ["Compete in beach volleyball", "Compete in rhythmic gymnastics"],
+		"outputs": "Will Joe retain his dignity?"
 	}
 ]
